@@ -10,17 +10,21 @@ Play! 2.0 Framework Tutorial - Guestbook
 
 ### 추천하는 개발환경 구축하
 1. 자바 5.0 이상 8.0 이하 
-  > Play 프레임워크는 2.2버전에서 자바 8.0을 지원한다.
-  >> [로드맵](https://docs.google.com/a/ajinsys.com/document/d/1OEt6gZ3a-daSkNXqXGAM4jBs5LtuDkLZIzsWN9aeM1g "roadmap") 참조 
+> Play 프레임워크는 2.2버전에서 자바 8.0을 지원한다.
+> [로드맵](https://docs.google.com/document/d/1OEt6gZ3a-daSkNXqXGAM4jBs5LtuDkLZIzsWN9aeM1g/preview?sle=true "roadmap") 참조 
 2. 이클립스 최신 버전
-  >> [로드맵](https://docs.google.com/a/ajinsys.com/document/d/1OEt6gZ3a-daSkNXqXGAM4jBs5LtuDkLZIzsWN9aeM1g/edit "roadmap") 참조 
+> [Eclipse](http://www.eclipse.org/downloads/ ) 참조 
+> [Setup and use Play framework 2.0 in Scala IDE 2.0](http://scala-ide.org/docs/tutorials/play20scalaide20/index.html "Setup and use Play framework 2.0 in Scala IDE 2.0") 참조 
 3. 가벼운 개발환경을 원한다면, subline 과 play2.0 plugin
-  >> [Sublime Text 2](http://www.sublimetext.com/2 | "Sublime Text 2")
-     Preference, Package Control, Install Package, type "play" 
+> [Sublime Text 2](http://www.sublimetext.com/2 "Sublime Text 2")
+> Preference, Package Control, Install Package, type "play" 
   
-#기능 요구사항 정리
+#방명록(Guestbook)의 기능 요구사항 정리
+1. 메인페이지에서 방명록의 리스트를 볼수 있다. 
+2. 방명록 작성시 이름, 이메일주소, 내용, 비밀번호을 작성할 수 있다. 
+3. 방명록은 자동 생성된 ID를 기준으로 읽을 수 있다.
+4. 방명록은 등록시 입력한 비밀번호를 확인후 삭제를 한다.
 
-
-# 참조 링크
-1. [scala template helper doc] (http://www.playframework.org/documentation/api/2.0/scala/views/html/helper/package.html "helper doc")
-1. [scala template helper doc] (http://www.playframework.org/documentation/api/2.0/scala/views/html/helper/package.html "helper doc")
+#참조 링크
+1. [Scala API - template helper] (http://www.playframework.org/documentation/api/2.0/scala/views/html/helper/package.html "helper doc")
+1. [Setup and use Play framework 2.0 in Scala IDE 2.0] (http://scala-ide.org/docs/tutorials/play20scalaide20/index.html)

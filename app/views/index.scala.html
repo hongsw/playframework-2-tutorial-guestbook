@@ -1,7 +1,22 @@
-@(message: String)
+@(list: List[Guestbook])
 
-@main("Welcome to Play 2.0") {
-    
-    @play20.welcome(message, style = "Java")
-    
+@main("GuestBook") {
+	<ul class="media-list">
+	@if(list.size() == 0){
+		<span class="info" >No geustbook.</span>
+	}
+	@for(post <- list) {
+		<li class="post-@post.id">
+			<div class="media-body">
+				<span class="media-heading" style="font-weight: bold;font-size: 1.5em;">@post.name</span>
+				<span class="info" >@post.postAt.format("yyyy년 MMM d일")</span>
+				<span class="info" ><a href="mailto:@post.email">Contact</a></span>
+				<div>@post.content</div>
+			</div>
+		</li>
+	}
+	</ul>
+
+    <a href="@routes.Application.write()">Write</a>
+    <a href="@routes.Application.index()">List</a>
 }

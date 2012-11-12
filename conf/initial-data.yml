@@ -1,0 +1,49 @@
+users:
+- !!models.User
+    email:      bob@gmail.com
+    name:       Bob
+    password:   secret
+    
+- !!models.User
+    email:      bob2@gmail.com
+    name:       Bob2
+    password:   secret
+    
+- !!models.User
+    email:      bob3@gmail.com
+    name:       Bob3
+    password:   secret
+    
+- !!models.User
+    email:      bob4@gmail.com
+    name:       Bob4
+    password:   secret
+    
+guestbook:
+ - !!models.Guestbook
+        id:         1
+        contents:   Hello Play! Framework 2.0 for Java
+        postAt:     2012-01-01
+        author: !!models.User
+                email: bob@gmail.com
+        likers:
+            - !!models.User
+                email: bob2@gmail.com
+            - !!models.User
+                email: bob3@gmail.com
+                
+                
+ - !!models.Guestbook
+        id:         2
+        contents:   Hello Play! Framework 2.0 for Scala
+        postAt:     2012-01-02
+        author: !!models.User
+                email: bob2@gmail.com
+        likers:
+            - !!models.User
+                email: bob3@gmail.com
+            - !!models.User
+                email: bob4@gmail.com
+                
+                
+          

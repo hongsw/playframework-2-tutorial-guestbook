@@ -1,12 +1,7 @@
 @(list: List[Guestbook])
 
 @main("GuestBook") {
-	@if(flash.get("success")) {
-		<div class="alert-success"><strong>Well done!</strong>@flash.get("success")</div>
-	}
-	@if(flash.get("info")) {
-		<div class="alert-info"><strong>Heads up!</strong>@flash.get("info")</div>
-	}
+	
 	<ul class="media-list">
 	@for(post <- list) {
 		<li class="post-@post.id">

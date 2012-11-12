@@ -32,7 +32,7 @@ public class Application extends Controller {
 		Guestbook gb = Guestbook.findbyIDPW(id, password);
 		if (gb != null){
 			gb.delete();
-			flash("info", "방명록에 삭제 되었습니다.");
+			flash("success", "방명록이 삭제 되었습니다.");
 		}else{
 			flash("error", "해당하는 방명록이 없거나 패스워드가 틀립니다.");
 		}
@@ -49,7 +49,7 @@ public class Application extends Controller {
 		gb.password = DigestUtils.md5Hex( gb.password );
 		gb.postAt = new Date();
 		gb.save();
-		flash("info", "방명록에 등록 되었습니다.");
+		flash("success", "방명록이 등록 되었습니다.");
 		return INDEX;
 	}
 

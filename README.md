@@ -31,6 +31,9 @@ Tutorial : 방명록(Guestbook)의 기능 요구사항 정리
 2. 방명록 작성시 이름, 이메일주소, 내용, 비밀번호을 작성할 수 있다. 
 3. 방명록은 자동 생성된 ID를 기준으로 읽을 수 있다.
 4. 방명록은 등록시 입력한 비밀번호를 확인후 삭제를 한다.
+2단계에서 진행할예정
+
+
 
 ### 참조 링크
 1. [Scala API - template helper] (http://www.playframework.org/documentation/api/2.0/scala/views/html/helper/package.html "helper doc")

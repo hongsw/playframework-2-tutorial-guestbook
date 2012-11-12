@@ -1,6 +1,7 @@
 package controllers;
 
 import java.util.Date;
+import java.util.List;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
@@ -17,9 +18,10 @@ public class Application extends Controller {
 	final static Form<Guestbook> guestbookForm = form(Guestbook.class);
 	
 	public static Result index() {
-		return ok(
-				index.render(
-						Guestbook.find.all()));
+		List<Guestbook> list = Guestbook.find.all();
+		if(list.size() == 0)
+			flash("info", "첫번째 방명록을 작성해주세요.");
+		return ok(index.render(list));
 	}
 
 	public static Result write() {
@@ -39,6 +41,10 @@ public class Application extends Controller {
 
 	public static Result doWrite() {
 		Form<Guestbook> guestbookForm = form(Guestbook.class).bindFromRequest();
+		if(guestbookForm.hasErrors()){
+			flash("error", "입력 항목을 확인해주세요.");
+			return ok(write.render(guestbookForm));
+		}
 		Guestbook gb = guestbookForm.get();
 		gb.password = DigestUtils.md5Hex( gb.password );
 		gb.postAt = new Date();

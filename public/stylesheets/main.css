@@ -1,6 +1,9 @@
 .info{
 	color: #BEBEC5;
 }
+.error{
+	color: #BE0000;
+}
 li{
 	margin-bottom: 10px;
 }

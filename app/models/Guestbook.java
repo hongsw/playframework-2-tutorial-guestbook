@@ -36,7 +36,14 @@ public class Guestbook extends Model {
     public Date postAt;
     
     // -- Querie  //
-    public static Model.Finder<Long,Guestbook> find = new Model.Finder(Long.class, Guestbook.class);
+    public static Model.Finder<Long,Guestbook> find = new Model.Finder<Long, Guestbook>(Long.class, Guestbook.class);
+
+	public Guestbook(String name, String email, String password, String content) {
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.content = content;
+	}
 
 	public static Guestbook findbyIDPW(Long id2, String password2) {
 		return find.where()

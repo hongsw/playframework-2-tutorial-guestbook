@@ -1,7 +1,7 @@
 @(myForm: Form[Guestbook])
 @import helper._
 
-@main("Write GuestBook") {
+@main("GuestBook Form") {
 	@form(action = routes.Application.doWrite()) {
     	@inputText(myForm("name"))
     	@inputText(myForm("email"))

@@ -1,7 +1,5 @@
 @(title: String)(content: Html)
-
 <!DOCTYPE html>
-
 <html>
     <head>
         <title>@title</title>
@@ -10,15 +8,15 @@
     </head>
     <body>
     	<div class="container">
-    	<h1>Welcome. Play 2.0 World.</h1>
-    	<h5>@title</h5>
-    	@if(flash.get("success")) {
-		<div class="alert-success"><strong>Well done!</strong>@flash.get("success")</div>
-		}
-		@if(flash.get("info")) {
-			<div class="alert-info"><strong>Heads up!</strong>@flash.get("info")</div>
-		}
-	    @content
+    	    <h1>Welcome. Play 2.0 World.</h1>
+        	@if(flash.get("success")) {
+                <div class="alert alert-success"><strong>Success ! </strong> @flash.get("success")</div>
+    		}
+    		@if(flash.get("info")) {
+    			<div class="alert alert-info"><strong>Information ! </strong> @flash.get("info")</div>
+    		}
+
+    	    @content
         </div>
     </body>
 </html>
